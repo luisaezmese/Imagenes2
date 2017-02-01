@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ListView1</string>
+    <string name="app_name1">MainActivity principal</string>
+    <string name="app_name2">MainActivity secundario</string>
 </resources>

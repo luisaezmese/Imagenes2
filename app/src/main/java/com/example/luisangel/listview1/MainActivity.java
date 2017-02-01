@@ -40,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
 
             String elemento = (String)parent.getItemAtPosition(position);
 
-            Toast.makeText(MainActivity.this,elemento,Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+            intent.putExtra("valor", elemento);
+            startActivity(intent);
+
         }
 
     }
