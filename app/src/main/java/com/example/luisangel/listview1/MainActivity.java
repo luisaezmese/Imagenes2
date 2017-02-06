@@ -24,27 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList <String> listaPaises = new ArrayList<String>(Arrays.asList(paises));
 
-        ArrayAdapter <String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listaPaises);
+        Menu adapter = new Menu (this,android.R.layout.simple_list_item_1, listaPaises);
 
         final ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new nuevoListener());
-
-    }
-
-    private class nuevoListener implements AdapterView.OnItemClickListener {
-
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            String elemento = (String)parent.getItemAtPosition(position);
-
-            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-            intent.putExtra("valor", elemento);
-            startActivity(intent);
-
-        }
 
     }
 }
